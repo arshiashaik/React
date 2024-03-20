@@ -1,0 +1,22 @@
+## Rendering the Root component and activating strict mode
+
+```
+import React from 'react';
+imprt ReactDOM from 'react-dom/client';
+
+function App() {
+  return <h1>Hello World!</h1>
+}
+
+// React V18
+const root = ReactDOM.createRoot(document.getElementById('root');
+root.render(
+  <React.StrictMode> // StrcitMode renders the components twice to find and remove any bugs. And also react uses this to check for any outdated parts of React API 
+    <App />
+  </React.StrictMode>
+)
+
+// React before v18
+// React.render(<App />);
+
+```
